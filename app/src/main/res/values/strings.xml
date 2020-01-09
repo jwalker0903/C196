@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">C196</string>
+    <string name="title_activity_terms">TermsActivity</string>
+    <string name="title_activity_courses">CoursesActivity</string>
+    <string name="title_activity_term_details">TermDetailsActivity</string>
+    <string name="title_activity_course_detail">CourseDetailActivity</string>
+    <string name="title_activity_assessment_detail">AssessmentDetailActivity</string>
+</resources>

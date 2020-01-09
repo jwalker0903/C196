@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wgu.jwalker.c196">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TermsActivity"
+            android:label="Terms"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CoursesActivity"
+            android:label="@string/title_activity_courses"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TermDetailsActivity"
+            android:label="@string/title_activity_term_details"
+            android:parentActivityName=".TermsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.TermsActivity" />
+        </activity>
+        <activity
+            android:name=".CourseDetailActivity"
+            android:label="@string/title_activity_course_detail"
+            android:parentActivityName=".CoursesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.CoursesActivity" />
+        </activity>
+        <activity android:name=".AssessmentsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AssessmentDetailActivity"
+            android:label="@string/title_activity_assessment_detail"
+            android:parentActivityName=".AssessmentsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.wgu.jwalker.c196.AssessmentsActivity" />
+        </activity>
+        <receiver android:name=".AlarmReceiver"/>
+    </application>
+
+</manifest>

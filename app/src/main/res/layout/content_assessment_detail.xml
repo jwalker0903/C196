@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AssessmentDetailActivity"
+    tools:showIn="@layout/activity_assessment_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assessmentEntryView_ADD"
+        >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!--Row 1-->
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/assessmentHeader_ADD"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:hint="Assessment Name"
+                    android:inputType="textMultiLine"
+                    />
+            </TableRow>
+
+            <!--Row 2-->
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/assessmentCode_ADD"
+                    android:hint="Code (i.e., CLP1)"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <!--Row 3-->
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/assessmentDescription_ADD"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    />
+
+            </TableRow>
+
+            <!--Row 4-->
+            <TableRow>
+                <TextView
+                    android:text="Course:"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/courseSpinner_ADD"
+                    android:layout_weight="1"
+                    >
+                </Spinner>
+
+            </TableRow>
+
+            <!--Row 5-->
+
+            <TableRow>
+                <TextView
+                    android:text="Type:"
+                    />
+
+                <Spinner
+                    android:id="@+id/typeSpinner_ADD"
+                    >
+                </Spinner>
+            </TableRow>
+
+            <!--Row 6-->
+
+            <TableRow>
+                <TextView
+                    android:text="Status:"
+                    />
+
+                <Spinner
+                    android:id="@+id/statusSpinner_ADD"
+                    >
+                </Spinner>
+            </TableRow>
+
+            <!--Row 7-->
+            <TableRow>
+
+                <TextView
+                    android:text="Due Date:"
+                    />
+
+                <TextView
+                    android:id="@+id/dueDate_ADD"
+                    android:hint="select date"
+                    android:onClick="dateSelect_ADD"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/alertButton_ADD"
+                    android:text="SET ALERT"
+                    android:onClick="addAlert_ADD"/>
+            </TableRow>
+
+            <!--Row 8-->
+            <TableRow>
+                <Button
+                    android:id="@+id/saveButton_ADD"
+                    android:text="SAVE"
+                    android:onClick="saveAssessment_ADD"
+                    />
+
+                <Button
+                    android:id="@+id/cancelButton_ADD"
+                    android:text="CANCEL"
+                    android:onClick="cancelAssessmentAdd_ADD"/>
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

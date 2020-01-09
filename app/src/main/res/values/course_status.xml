@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="course_status">
+        <item>Not Planned</item>
+        <item>Planned</item>
+        <item>Enrolled</item>
+        <item>Completed</item>
+    </string-array>
+
+</resources>

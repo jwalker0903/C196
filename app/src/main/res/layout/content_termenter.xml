@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:visibility="visible"
+    tools:context=".TermsActivity"
+    tools:showIn="@layout/activity_terms">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/termEntry"
+        android:visibility="gone"
+        >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Row 1-->
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/termHeader"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <!--Row 2-->
+            <TableRow>
+
+                <TextView
+                    android:text="Start date"
+                    />
+
+                <TextView
+                    android:id="@+id/termStart"
+                    android:hint="Start date"
+
+                    />
+
+            </TableRow>
+
+            <!--Row 3-->
+            <TableRow>
+                <TextView
+                    android:text="End date"
+                    />
+
+                <TextView
+                    android:id="@+id/termEnd"
+                    />
+
+            </TableRow>
+
+            <!--Row 4-->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/saveTermButton"
+                    android:text="SAVE"
+                    android:onClick="addData"
+                    />
+
+                <Button
+                    android:id="@+id/cancelTermButton"
+                    android:text="CANCEL"
+                    android:onClick="cancelButton"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>

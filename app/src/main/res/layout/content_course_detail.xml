@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CourseDetailActivity"
+    tools:showIn="@layout/activity_course_detail">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseDetailView">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0"
+            android:stretchColumns="1"
+            >
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/courseName_CD"
+                    android:textSize="20sp"
+                    android:inputType="textMultiLine"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <TextView
+                    android:text="Term"
+                    android:layout_weight="1"
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:id="@+id/termSpinner_CD"
+                    android:layout_weight="1"
+                    >
+                </Spinner>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <EditText
+                    android:id="@+id/courseDescription_CD"
+                    android:minHeight="30dp"
+                    android:inputType="textMultiLine"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <TextView
+                    android:id="@+id/startLabel_CD"
+                    android:text="Start date"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/editStart_CD"
+                    android:hint="start"
+                    android:layout_width="wrap_content"
+                    android:layout_alignLeft="@id/startLabel"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:onClick="startDateSelect_CD"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <TextView
+                    android:id="@+id/endLabel_CD"
+                    android:text="End date"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/editEnd_CD"
+                    android:hint="end"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_weight="1"
+                    android:onClick="endDateSelect_CD"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:text="Status"
+                    android:layout_weight="1"
+                    />
+
+                <Spinner
+                    android:id="@+id/statusSpinner_CD"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorTableBackground"
+                    android:paddingBottom="3dp"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_width="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/mentorLabel_CD"
+                    android:textStyle="bold"
+                    android:text="Mentor"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_width="0dp">
+
+                <EditText
+                    android:id="@+id/editMentorName_CD"
+                    android:hint="name"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_width="0dp">
+
+                <EditText
+                    android:id="@+id/editMentorPhone_CD"
+                    android:hint="phone"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_width="0dp">
+
+                <EditText
+                    android:id="@+id/editMentorEmail_CD"
+                    android:hint="email"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:paddingBottom="3dp"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+            <TableLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/assessmentsView_CD"
+                android:paddingTop="30dp">
+
+                <TableRow
+                    android:background="@color/colorTableBackground">
+
+                    <TextView
+                        android:text="ASSESSMENTS"
+                        />
+
+                    <Button
+                        android:id="@+id/addAssessmentButton_CD"
+                        android:text="ADD"
+                        android:onClick="addAssessment_CD"/>
+
+                </TableRow>
+
+                    <TableLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/assessmentsTable_CD"
+                        android:paddingTop="1dp">
+
+                        <TableRow>
+
+                            <TextView
+                                android:text="blank"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+
+            </TableLayout>
+
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notesView_CD">
+
+                            <TableRow
+                                android:background="@color/colorTableBackground">
+                                <TextView
+                                    android:text="NOTES"/>
+
+                                <Button
+                                    android:id="@+id/newNoteButton_CD"
+                                    android:text="New Note"
+                                    />
+
+                            </TableRow>
+
+                        <TableLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/notesTable_CD"
+                            android:paddingTop="3dp">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:text="blank"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseAlertButton"
+                android:onClick="addAlert_CD"
+                android:text="ADD ALERT"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseDeleteButton"
+                android:onClick="deleteButton_CD"
+                android:text="DELETE COURSE"/>
+                <!--android:layout_alignParentBottom="true"-->
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseSaveButton"
+                android:onClick="saveButton_CD"
+                android:text="SAVE"/>
+
+    </TableLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

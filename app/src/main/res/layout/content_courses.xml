@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CoursesActivity"
+    tools:showIn="@layout/activity_courses">
+
+    <ScrollView
+        android:id="@+id/courseEntryView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0"
+            android:stretchColumns="1">
+
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:id="@+id/editCourseName"
+                    android:hint="Course name"
+                    android:textSize="20sp"
+                    android:inputType="textMultiLine"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/termLabel"
+                    android:text="Term"
+
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:id="@+id/termSpinner">
+
+                </Spinner>
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/courseDescription"
+                    android:hint="Description"
+                    android:layout_width="wrap_content"
+                    android:minHeight="30dp"
+                    android:inputType="textMultiLine"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/startLabel"
+                    android:text="Start date"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/editStart"
+                    android:hint="start"
+                    android:layout_width="wrap_content"
+                    android:layout_alignLeft="@id/startLabel"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:onClick="startDateSelect_CA"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/endLabel"
+                    android:text="End date"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/editEnd"
+                    android:hint="end"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:onClick="endDateSelect_CA"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:text="Status"
+                    />
+
+                <Spinner
+                    android:id="@+id/statusSpinner"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_width="match_parent">
+                </Spinner>
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorTableBackground"
+                    android:paddingBottom="3dp"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/mentorLabel"
+                    android:textStyle="bold"
+                    android:text="Mentor"/>
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp">
+                <EditText
+                    android:id="@+id/editMentorName"
+                    android:hint="name"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp">
+                <EditText
+                    android:id="@+id/editMentorPhone"
+                    android:hint="phone"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp">
+                <EditText
+                    android:id="@+id/editMentorEmail"
+                    android:hint="email"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:paddingBottom="3dp"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp">
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:text="SAVE"
+                    android:onClick="saveCourse"
+                    />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:text="CANCEL"
+                    android:onClick="cancelCourse"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
